@@ -23,7 +23,7 @@ library(datasauRus)
 
 **Here is dino_data plotted:**
 
-```{r plot-dino, fig.height=3, fig.width=6}
+```{r plot-dino, fig.height=7, fig.width=7}
 dino_data <- datasaurus_dozen %>%
   filter(dataset == "dino")
 ggplot(data = dino_data, mapping = aes(x = x, y = y)) +
@@ -42,7 +42,7 @@ dino_data %>%
 
 **Here is star_data plotted:**
 
-```{r plot-star, fig.height=3, fig.width=6}
+```{r plot-star, fig.height=7, fig.width=7}
 star_data <- datasaurus_dozen %>%
   filter(dataset == "star")
 ggplot(data = star_data, mapping = aes(x = x, y = y)) +
@@ -64,7 +64,7 @@ star_data %>%
 
 ##### Here is circle_data plotted:
 
-```{r plot-circle, fig.height=3, fig.width=6}
+```{r plot-circle, fig.height=7, fig.width=7}
 circle_data <- datasaurus_dozen %>%
   filter(dataset == "circle")
 ggplot(data = circle_data, mapping = aes(x = x, y = y)) +
@@ -83,6 +83,14 @@ circle_data %>%
 ```
 * The correlation coefficient is -0.0683. Compared to the correlation coefficient of dino_data, -0.0645, this correlation coefficient of -0.0683, is less than the *r* of dino_data by 0.0038.
 
-### Exercise 5
+## Exercise 5: datasaurus_dozen
 
-(Add code and narrative as needed. To add R chunks either type out the backticks, curly braces, and the letter `r` or use the Insert chunk button above, with the green +C.)
+##### Here
+
+```{r plot- datasaurus_dozen, fig.height=25, fig.width=25}
+ggplot(datasaurus_dozen, aes(x = x, y = y, color = dataset))+
+geom_point()+
+facet_wrap(~ dataset, ncol = 3) + # facet the dataset variable, in 3 cols
+theme(legend.position = "none")
+
+```
