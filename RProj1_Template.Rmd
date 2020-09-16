@@ -5,7 +5,7 @@ date: "9/16/2020"
 output: 
   html_document: 
     theme: cosmo
-    highlight: haddock
+    highlight: pygments
   pdf_document: 
     highlight: espresso
 ---
